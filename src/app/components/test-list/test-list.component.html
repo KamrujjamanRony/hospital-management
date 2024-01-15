@@ -1,287 +1,11 @@
-<section class="flex flex-col lg:flex-row gap-1 p-5 bg-white">
-  <!-- Test Form -->
-  <div class="w-full p-1 border">
-    <div class="w-full p-1 border">
-      <form
-        (ngSubmit)="onFormSubmit()"
-        #myForm="ngForm"
-        class="py-3 px-1 text-black"
-        data-te-validation-init
-      >
-        <!-- Test Name  -->
-        <div class="w-full pb-1">
-          <div
-            class="relative mb-1 md:mb-3 w-full"
-            data-te-input-wrapper-init
-            data-te-validate="input"
-            data-te-validation-ruleset="isRequired"
-          >
-            <label
-              for="Name"
-              class="absolute left-3 top-0 max-w-[90%] origin-[0_0] translate-y-[-0.7rem] scale-[0.8] bg-white text-primary px-2 z-10"
-              >Name
-            </label>
-            <input
-              autocomplete="off"
-              type="text"
-              class="block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none relative"
-              id="Name"
-              name="Name"
-              placeholder="Test Name"
-              required="true"
-              minlength="2"
-            />
-          </div>
-        </div>
-        <!-- Test Charge  -->
-        <div class="w-full pb-1">
-          <div
-            class="relative mb-1 md:mb-3 w-full"
-            data-te-input-wrapper-init
-            data-te-validate="input"
-            data-te-validation-ruleset="isRequired"
-          >
-            <label
-              for="Charge"
-              class="absolute left-3 top-0 max-w-[90%] origin-[0_0] translate-y-[-0.7rem] scale-[0.8] bg-white text-primary px-2 z-10"
-              >Charge
-            </label>
-            <input
-              autocomplete="off"
-              type="text"
-              class="block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none relative"
-              id="Charge"
-              name="Charge"
-              placeholder="Test Charge"
-              required="true"
-              minlength="2"
-            />
-          </div>
-        </div>
-        <!-- Less Item  -->
-        <div class="w-full pb-1">
-          <div class="relative mb-1 md:mb-3 w-full">
-            <select name="less" id="less" data-te-select-init>
-              <option value="No">No</option>
-              <option value="Yes">Yes</option>
-            </select>
-            <label
-              data-te-select-label-ref
-              for="sex"
-              class="text-primary bg-white"
-              >Less Item</label
-            >
-          </div>
-        </div>
-        <!-- Default Hnr. Amt. -->
-        <div class="w-full flex gap-1 mb-1">
-          <div class="w-full">
-            <div
-              class="relative mb-1 md:mb-3 w-full"
-              data-te-input-wrapper-init
-            >
-              <label
-                for="hnr-amt"
-                class="absolute left-3 top-0 max-w-[90%] origin-[0_0] translate-y-[-0.7rem] scale-[0.8] text-primary bg-white px-2 z-10"
-                >Default Hnr. Amt.
-              </label>
-              <input
-                autocomplete="off"
-                type="number"
-                class="block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none relative"
-                id="hnr-amt"
-                name="hnr-amt"
-                placeholder="Default Hnr. Amt."
-              />
-            </div>
-          </div>
-          <div class="w-[170px]">
-            <div class="relative mb-1 md:mb-3 w-full">
-              <select name="less" data-te-select-init>
-                <option value="%">%</option>
-                <option value="TK">TK</option>
-              </select>
-            </div>
-          </div>
-          <div class="w-full">
-            <div
-              class="relative mb-1 md:mb-3 w-full"
-              data-te-input-wrapper-init
-            >
-              <label
-                for="calculateAmount"
-                class="absolute left-3 top-0 max-w-[90%] origin-[0_0] translate-y-[-0.7rem] scale-[0.8] text-primary bg-white px-2 z-10"
-                >Calculate Amount
-              </label>
-              <input
-                autocomplete="off"
-                type="text"
-                class="block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none relative"
-                id="calculateAmount"
-                name="calculateAmount"
-                placeholder="Calculate Amount"
-              />
-            </div>
-          </div>
-        </div>
-        <!-- Is Vaq Item -->
-        <div class="w-full flex gap-1 mb-1">
-          <div class="w-full">
-            <div class="relative mb-1 md:mb-3 w-full">
-              <select name="IsVaqItem" id="IsVaqItem" data-te-select-init>
-                <option value="0">No</option>
-                <option value="1">Yes</option>
-              </select>
-              <label
-                data-te-select-label-ref
-                for="IsVaqItem"
-                class="text-primary"
-                >Is Vaq Item</label
-              >
-            </div>
-          </div>
-          <div class="w-full">
-            <div class="relative mb-1 md:mb-3 w-full">
-              <select name="IsDoctor" id="IsDoctor" data-te-select-init>
-                <option value="0">No</option>
-                <option value="1">Yes</option>
-              </select>
-              <label
-                data-te-select-label-ref
-                for="IsDoctor"
-                class="text-primary"
-                >Is Doctor</label
-              >
-            </div>
-          </div>
-        </div>
-        <!-- Department -->
-        <div class="w-full flex gap-1 mb-1">
-          <div class="relative mb-1 md:mb-3 w-[70%]">
-            <select
-              id="department"
-              name="department"
-              data-te-select-init
-              data-te-select-filter="true"
-            >
-              <option value="0">Select Department</option>
-              <option value="a">aaaaaaaaaaaa</option>
-              <option value="s">ssssssssssss</option>
-            </select>
-            <label
-              for="department"
-              data-te-select-label-ref
-              class="text-primary"
-              >Department</label
-            >
-          </div>
-          <div class="w-[30%]">
-            <div class="relative mb-1 md:mb-3 w-full">
-              <select name="chrChange" id="chrChange" data-te-select-init>
-                <option value="0">No</option>
-                <option value="1">Yes</option>
-              </select>
-              <label
-                data-te-select-label-ref
-                for="chrChange"
-                class="text-primary"
-                >Chr. Change</label
-              >
-            </div>
-          </div>
-        </div>
-        <!-- Report File Name -->
-        <div class="w-full flex gap-1 mb-1">
-          <div class="w-full">
-            <div
-              class="relative mb-1 md:mb-3 w-full"
-              data-te-input-wrapper-init
-            >
-              <label
-                for="reportFile"
-                class="absolute left-3 top-0 max-w-[90%] origin-[0_0] translate-y-[-0.7rem] scale-[0.8] text-primary bg-white px-2 z-10"
-                >Report File Name
-              </label>
-              <input
-                autocomplete="off"
-                type="number"
-                class="block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none relative"
-                id="reportFile"
-                name="reportFile"
-                placeholder="Report File Name"
-              />
-            </div>
-          </div>
-          <div class="w-full">
-            <div
-              class="relative mb-1 md:mb-3 w-full"
-              data-te-input-wrapper-init
-            >
-              <label
-                for="reportFee"
-                class="absolute left-3 top-0 max-w-[90%] origin-[0_0] translate-y-[-0.7rem] scale-[0.8] text-primary bg-white px-2 z-10"
-                >Report Fee
-              </label>
-              <input
-                autocomplete="off"
-                type="text"
-                class="block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none relative"
-                id="reportFee"
-                name="reportFee"
-                placeholder="Report Fee"
-              />
-            </div>
-          </div>
-        </div>
-        <!-- Sticker -->
-        <div class="w-full flex gap-1">
-          <div class="relative mb-1 md:mb-3 w-[70%]">
-            <select
-              id="stickerName"
-              name="stickerName"
-              data-te-select-init
-              data-te-select-filter="true"
-            >
-              <option value="0">Select Sticker Name</option>
-              <option value="a">aaaaaaaaaaaa</option>
-              <option value="s">ssssssssssss</option>
-            </select>
-            <label
-              for="stickerName"
-              data-te-select-label-ref
-              class="text-primary"
-              >Sticker Name</label
-            >
-          </div>
-          <div class="text-center w-[30%]">
-            <input
-              class="mb-3 inline-block w-full rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2)] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.1),0_4px_18px_0_rgba(0,0,0,0.2)]"
-              type="submit"
-              data-te-submit-btn-ref
-              data-te-ripple-init
-              data-te-ripple-color="light"
-              style="
-                background: linear-gradient(
-                  to right,
-                  #2fe6f7 0%,
-                  #23a8f5 46%,
-                  #0b75b8 100%
-                );
-              "
-              value="Save Test"
-            />
-          </div>
-        </div>
-      </form>
-    </div>
-    <div></div>
-  </div>
+<section class="p-5 bg-white">
+  <h1 class="lemon text-4xl capitalize text-center text-orange-400 font-bold py-5">All Test</h1>
   <!-- Test Table -->
-  <div class="w-full h-fit overflow-hidden bg-white text-black p-1 border">
+  <div class="max-w-6xl mx-auto bg-white text-black p-1 border">
     <div class="overflow-x-auto">
-      <table class="table table-xs text-center">
+      <table class="table table-sm text-center">
         <thead>
-          <tr class="bg-orange-300 text-md font-bold">
+          <tr class="bg-orange-300 text-lg font-bold">
             <th>Id</th>
             <th>Name</th>
             <th>Charge</th>
@@ -295,8 +19,8 @@
               Quality Control Specialist ddddddddddddddd dddddddddddd
               dddddddddddddd
             </td>
-            <td>44444</td>
-            <td class="flex gap-1">
+            <td class="font-bold">1234567890</td>
+            <td class="flex justify-center items-center align-middle gap-1">
               <button
                 type="button"
                 class="inline-block rounded bg-warning px-3 pb-1 mr-2 pt-1 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#e4a11b] transition duration-150 ease-in-out hover:bg-warning-600 hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:bg-warning-600 focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:outline-none focus:ring-0 active:bg-warning-700 active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(228,161,27,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)]"
@@ -317,8 +41,8 @@
               Quality Control Specialist ddddddddddddddd dddddddddddd
               dddddddddddddd
             </td>
-            <td>44444</td>
-            <td class="flex gap-1">
+            <td class="font-bold">44444</td>
+            <td class="flex justify-center items-center align-middle gap-1">
               <button
                 type="button"
                 class="inline-block rounded bg-warning px-3 pb-1 mr-2 pt-1 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#e4a11b] transition duration-150 ease-in-out hover:bg-warning-600 hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:bg-warning-600 focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:outline-none focus:ring-0 active:bg-warning-700 active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(228,161,27,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)]"
@@ -339,8 +63,8 @@
               Quality Control Specialist ddddddddddddddd dddddddddddd
               dddddddddddddd
             </td>
-            <td>44444</td>
-            <td class="flex gap-1">
+            <td class="font-bold">44444</td>
+            <td class="flex justify-center items-center align-middle gap-1">
               <button
                 type="button"
                 class="inline-block rounded bg-warning px-3 pb-1 mr-2 pt-1 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#e4a11b] transition duration-150 ease-in-out hover:bg-warning-600 hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:bg-warning-600 focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:outline-none focus:ring-0 active:bg-warning-700 active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(228,161,27,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)]"
@@ -361,8 +85,8 @@
               Quality Control Specialist ddddddddddddddd dddddddddddd
               dddddddddddddd
             </td>
-            <td>44444</td>
-            <td class="flex gap-1">
+            <td class="font-bold">44444</td>
+            <td class="flex justify-center items-center align-middle gap-1">
               <button
                 type="button"
                 class="inline-block rounded bg-warning px-3 pb-1 mr-2 pt-1 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#e4a11b] transition duration-150 ease-in-out hover:bg-warning-600 hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:bg-warning-600 focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:outline-none focus:ring-0 active:bg-warning-700 active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(228,161,27,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)]"
@@ -383,8 +107,8 @@
               Quality Control Specialist ddddddddddddddd dddddddddddd
               dddddddddddddd
             </td>
-            <td>44444</td>
-            <td class="flex gap-1">
+            <td class="font-bold">44444</td>
+            <td class="flex justify-center items-center align-middle gap-1">
               <button
                 type="button"
                 class="inline-block rounded bg-warning px-3 pb-1 mr-2 pt-1 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#e4a11b] transition duration-150 ease-in-out hover:bg-warning-600 hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:bg-warning-600 focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:outline-none focus:ring-0 active:bg-warning-700 active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(228,161,27,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)]"
@@ -405,8 +129,8 @@
               Quality Control Specialist ddddddddddddddd dddddddddddd
               dddddddddddddd
             </td>
-            <td>44444</td>
-            <td class="flex gap-1">
+            <td class="font-bold">44444</td>
+            <td class="flex justify-center items-center align-middle gap-1">
               <button
                 type="button"
                 class="inline-block rounded bg-warning px-3 pb-1 mr-2 pt-1 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#e4a11b] transition duration-150 ease-in-out hover:bg-warning-600 hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:bg-warning-600 focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:outline-none focus:ring-0 active:bg-warning-700 active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(228,161,27,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)]"
@@ -427,8 +151,8 @@
               Quality Control Specialist ddddddddddddddd dddddddddddd
               dddddddddddddd
             </td>
-            <td>44444</td>
-            <td class="flex gap-1">
+            <td class="font-bold">44444</td>
+            <td class="flex justify-center items-center align-middle gap-1">
               <button
                 type="button"
                 class="inline-block rounded bg-warning px-3 pb-1 mr-2 pt-1 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#e4a11b] transition duration-150 ease-in-out hover:bg-warning-600 hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:bg-warning-600 focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:outline-none focus:ring-0 active:bg-warning-700 active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(228,161,27,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)]"
@@ -449,8 +173,8 @@
               Quality Control Specialist ddddddddddddddd dddddddddddd
               dddddddddddddd
             </td>
-            <td>44444</td>
-            <td class="flex gap-1">
+            <td class="font-bold">44444</td>
+            <td class="flex justify-center items-center align-middle gap-1">
               <button
                 type="button"
                 class="inline-block rounded bg-warning px-3 pb-1 mr-2 pt-1 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#e4a11b] transition duration-150 ease-in-out hover:bg-warning-600 hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:bg-warning-600 focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:outline-none focus:ring-0 active:bg-warning-700 active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(228,161,27,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)]"
@@ -471,8 +195,8 @@
               Quality Control Specialist ddddddddddddddd dddddddddddd
               dddddddddddddd
             </td>
-            <td>44444</td>
-            <td class="flex gap-1">
+            <td class="font-bold">44444</td>
+            <td class="flex justify-center items-center align-middle gap-1">
               <button
                 type="button"
                 class="inline-block rounded bg-warning px-3 pb-1 mr-2 pt-1 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#e4a11b] transition duration-150 ease-in-out hover:bg-warning-600 hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:bg-warning-600 focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:outline-none focus:ring-0 active:bg-warning-700 active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(228,161,27,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)]"
@@ -493,8 +217,8 @@
               Quality Control Specialist ddddddddddddddd dddddddddddd
               dddddddddddddd
             </td>
-            <td>44444</td>
-            <td class="flex gap-1">
+            <td class="font-bold">44444</td>
+            <td class="flex justify-center items-center align-middle gap-1">
               <button
                 type="button"
                 class="inline-block rounded bg-warning px-3 pb-1 mr-2 pt-1 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#e4a11b] transition duration-150 ease-in-out hover:bg-warning-600 hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:bg-warning-600 focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:outline-none focus:ring-0 active:bg-warning-700 active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(228,161,27,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)]"
@@ -515,8 +239,8 @@
               Quality Control Specialist ddddddddddddddd dddddddddddd
               dddddddddddddd
             </td>
-            <td>44444</td>
-            <td class="flex gap-1">
+            <td class="font-bold">44444</td>
+            <td class="flex justify-center items-center align-middle gap-1">
               <button
                 type="button"
                 class="inline-block rounded bg-warning px-3 pb-1 mr-2 pt-1 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#e4a11b] transition duration-150 ease-in-out hover:bg-warning-600 hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:bg-warning-600 focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:outline-none focus:ring-0 active:bg-warning-700 active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(228,161,27,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)]"
@@ -537,8 +261,8 @@
               Quality Control Specialist ddddddddddddddd dddddddddddd
               dddddddddddddd
             </td>
-            <td>44444</td>
-            <td class="flex gap-1">
+            <td class="font-bold">44444</td>
+            <td class="flex justify-center items-center align-middle gap-1">
               <button
                 type="button"
                 class="inline-block rounded bg-warning px-3 pb-1 mr-2 pt-1 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#e4a11b] transition duration-150 ease-in-out hover:bg-warning-600 hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:bg-warning-600 focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] focus:outline-none focus:ring-0 active:bg-warning-700 active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.3),0_4px_18px_0_rgba(228,161,27,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(228,161,27,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(228,161,27,0.2),0_4px_18px_0_rgba(228,161,27,0.1)]"
